@@ -1,0 +1,22 @@
+[
+  { "id": "iphone15", "cat": "phone", "brand": "Apple", "name": "iPhone 15", "price": 22990000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=iPhone+15", "specs": "OLED 6.1\", A16" },
+  { "id": "galaxy-s24", "cat": "phone", "brand": "Samsung", "name": "Galaxy S24", "price": 18990000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=Galaxy+S24", "specs": "AMOLED 6.2\", Exynos" },
+  { "id": "pixel-8", "cat": "phone", "brand": "Google", "name": "Pixel 8", "price": 16490000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=Pixel+8", "specs": "Actua 6.2\", Tensor" },
+  { "id": "xiaomi-14", "cat": "phone", "brand": "Xiaomi", "name": "Xiaomi 14", "price": 13990000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=Xiaomi+14", "specs": "AMOLED 6.4\", Snapdragon" },
+  { "id": "mba-m2", "cat": "laptop", "brand": "Apple", "name": "MacBook Air M2", "price": 26990000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=MacBook+Air+M2", "specs": "13.6\", 8GB/256GB" },
+  { "id": "thinkpad-x1", "cat": "laptop", "brand": "Lenovo", "name": "ThinkPad X1", "price": 32990000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=ThinkPad+X1", "specs": "14\", i7, 16GB" },
+  { "id": "rog-zephyrus", "cat": "laptop", "brand": "ASUS", "name": "ROG Zephyrus", "price": 39990000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=ROG+Zephyrus", "specs": "Ryzen, RTX" },
+  { "id": "xps-13", "cat": "laptop", "brand": "Dell", "name": "XPS 13", "price": 34990000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=XPS+13", "specs": "Evo i7, 16GB" },
+  { "id": "lg-27-4k", "cat": "screen", "brand": "LG", "name": "LG 27\" 4K", "price": 7990000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=LG+27+4K", "specs": "IPS, 60Hz" },
+  { "id": "asus-24-144", "cat": "screen", "brand": "ASUS", "name": "ASUS 24\"", "price": 4990000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=ASUS+24", "specs": "144Hz, IPS" },
+  { "id": "dell-ultrasharp", "cat": "screen", "brand": "Dell", "name": "Dell UltraSharp", "price": 8990000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=UltraSharp", "specs": "QHD, 75Hz" },
+  { "id": "samsung-odyssey", "cat": "screen", "brand": "Samsung", "name": "Samsung Odyssey", "price": 9990000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=Odyssey", "specs": "Curved, 165Hz" },
+  { "id": "airpods-pro", "cat": "headphone", "brand": "Apple", "name": "AirPods Pro", "price": 5990000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=AirPods+Pro", "specs": "ANC, MagSafe" },
+  { "id": "sony-xm5", "cat": "headphone", "brand": "Sony", "name": "Sony WH-1000XM5", "price": 7990000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=Sony+XM5", "specs": "ANC đỉnh cao" },
+  { "id": "nothing-ear", "cat": "headphone", "brand": "Nothing", "name": "Nothing Ear", "price": 2990000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=Nothing+Ear", "specs": "Thiết kế trong suốt" },
+  { "id": "beats-studio", "cat": "headphone", "brand": "Beats", "name": "Beats Studio", "price": 6490000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=Beats+Studio", "specs": "Bass mạnh mẽ" },
+  { "id": "charger-30w", "cat": "accessories", "brand": "Generic", "name": "Sạc nhanh USB-C 30W", "price": 390000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=Charger+30W", "specs": "PD 30W" },
+  { "id": "cable-c2c", "cat": "accessories", "brand": "Generic", "name": "Cáp USB-C to C", "price": 120000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=C2C+Cable", "specs": "1m, 60W" },
+  { "id": "mouse-bt", "cat": "accessories", "brand": "Generic", "name": "Chuột không dây", "price": 250000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=Mouse+BT", "specs": "Bluetooth" },
+  { "id": "keyboard-mech", "cat": "accessories", "brand": "Generic", "name": "Bàn phím cơ", "price": 1290000, "image": "https://dummyimage.com/600x600/f5f7fb/0f172a&text=Keyboard", "specs": "RGB, Hot-swap" }
+]
