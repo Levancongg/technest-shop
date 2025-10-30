@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useCart } from '../context/CartContext.jsx'
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:4000'
+// Prefer Vite proxy in dev (relative path), otherwise use configured API URL
+const API_BASE = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '')
 
 export default function Home() {
   const { add } = useCart()
@@ -11,9 +12,12 @@ export default function Home() {
   useEffect(() => {
     const cats = ['phone', 'laptop', 'screen', 'headphone', 'accessories']
     cats.forEach(cat => {
-      fetch(`${API}/api/products?cat=${cat}`)
-        .then(r => r.json())
+      const url = `${API_BASE ? API_BASE : ''}/api/products?cat=${cat}`
+      fetch(url)
+        .then(r => r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`)))
+        .then(list => Array.isArray(list) ? list : [])
         .then(list => setProducts(prev => ({ ...prev, [cat]: list.slice(0, 4) })))
+        .catch(() => setProducts(prev => ({ ...prev, [cat]: [] })))
     })
   }, [])
 
@@ -44,10 +48,10 @@ export default function Home() {
         <div className="container">
           <h2>Featured Categories</h2>
           <div className="catalog-grid">
-            <Link className="catalog-card" to="/category/phone">Smartphones</Link>
-            <Link className="catalog-card" to="/category/laptop">Laptops</Link>
-            <Link className="catalog-card" to="/category/screen">Screens</Link>
-            <Link className="catalog-card" to="/category/headphone">Headphones</Link>
+            <Link className="catalog-card" to="/category/phone">Smartphone</Link>
+            <Link className="catalog-card" to="/category/laptop">Laptop</Link>
+            <Link className="catalog-card" to="/category/screen">Screen</Link>
+            <Link className="catalog-card" to="/category/headphone">Headphone</Link>
             <Link className="catalog-card" to="/category/accessories">Accessories</Link>
           </div>
         </div>

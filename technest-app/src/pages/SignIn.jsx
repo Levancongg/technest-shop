@@ -1,13 +1,14 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext.jsx'
 
-const API = import.meta.env.VITE_API_URL || ''
+const API_BASE = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '')
 
 export default function SignIn() {
   const { login } = useAuth()
   const navigate = useNavigate()
-  const [error, setError] = useState('')
+  const location = useLocation()
+  const [error, setError] = useState(location.state?.notice || '')
   const [loading, setLoading] = useState(false)
 
   async function onSubmit(e){
@@ -16,7 +17,7 @@ export default function SignIn() {
     setLoading(true)
     const fd = new FormData(e.currentTarget)
     try {
-      const res = await fetch(`${API}/api/auth/login`, {
+      const res = await fetch(`${API_BASE ? API_BASE : ''}/api/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: fd.get('email'), password: fd.get('password') })

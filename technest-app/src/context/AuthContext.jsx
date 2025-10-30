@@ -14,7 +14,7 @@ export function AuthProvider({ children }) {
     user,
     login(userData) { setUser(userData) },
     logout() { setUser(null) }
-  }), [])
+  }), [user])
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }

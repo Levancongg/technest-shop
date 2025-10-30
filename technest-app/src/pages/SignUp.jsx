@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext.jsx'
 
-const API = import.meta.env.VITE_API_URL || ''
+const API_BASE = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '')
 
 export default function SignUp() {
   const { login } = useAuth()
@@ -16,7 +16,7 @@ export default function SignUp() {
     setLoading(true)
     const fd = new FormData(e.currentTarget)
     try {
-      const res = await fetch(`${API}/api/auth/register`, {
+      const res = await fetch(`${API_BASE ? API_BASE : ''}/api/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: fd.get('name'), email: fd.get('email'), password: fd.get('password') })
@@ -27,8 +27,8 @@ export default function SignUp() {
         setLoading(false)
         return
       }
-      login(data)
-      navigate('/')
+      // Redirect to sign-in after successful registration
+      navigate('/signin', { replace: true, state: { notice: 'Đăng ký thành công. Vui lòng đăng nhập.' } })
     } catch (err) {
       setError('Lỗi kết nối, vui lòng thử lại')
       setLoading(false)
